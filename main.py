@@ -5,9 +5,13 @@ from aiogram.filters import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
+from dotenv import load_dotenv
+import os
 
-TOKEN = "8940162665:AAGgo9n8Rxjwpor57gruuU4DvK9KO8IwScc"
-ADMIN_ID = 6840631785
+load_dotenv()
+
+TOKEN = os.getenv('TOKEN')
+ADMIN_ID = os.getenv('ADMIN_ID')
 
 dp = Dispatcher()
 bot = Bot(token=TOKEN)
